@@ -12,18 +12,24 @@ let blogs = [
     title: "Blog Satu",
     snippet:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus!",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem ",
   },
   {
     id: "2",
     title: "Blog Dua",
     snippet:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus!",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem ",
   },
   {
     id: "3",
     title: "Blog Tiga",
     snippet:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus!",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatibus! lorem ",
   },
 ];
 
