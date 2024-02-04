@@ -1,6 +1,5 @@
 import express from "express";
 
-
 const app = express();
 const port = 3000;
 
@@ -51,23 +50,25 @@ app.get("/blogs/:id", (req, res) => {
   res.render("blogs/details.ejs", { blog: blog });
 });
 
+app.get("/edit/:id", (req, res) => {
+  const id = req.params.id;
+  const blog = blogs.find((blog) => blog.id == id);
+  res.render("blogs/edit.ejs", { blog: blog });
+});
+
 app.delete("/blogs/:id", (req, res) => {
   const id = req.params.id;
   blogs = blogs.filter((blog) => blog.id != id);
   res.json({ redirect: "/blogs" });
 });
-
 app.put("/blogs/:id", (req, res) => {
   const id = req.params.id;
-  const { title, snippet } = req.body;
-  const blog = blogs.find((blog) => blog.id === id);
-  if (blog) {
-    blog.title = title;
-    blog.snippet = snippet;
-  }
-  res.render("blogs/details.ejs", { blog: blog });
+  const blog = blogs.find((blog) => blog.id == id);
+  blog.title = req.body.title;
+  blog.snippet = req.body.snippet;
+  blog.content = req.body.content;
+  res.json({ redirect: "/blogs" });
 });
-
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
