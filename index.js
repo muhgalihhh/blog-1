@@ -4,6 +4,8 @@ const app = express();
 const port = 3000;
 
 app.use(express.static("public"));
+app.use(express.json()); // Untuk mengurai body dari permintaan JSON
+app.use(express.urlencoded({ extended: true }));
 
 let blogs = [
   {
@@ -64,6 +66,9 @@ app.delete("/blogs/:id", (req, res) => {
 app.put("/blogs/:id", (req, res) => {
   const id = req.params.id;
   const blog = blogs.find((blog) => blog.id == id);
+  if (!blog) {
+    return res.status(404).send("Blog not found");
+  }
   blog.title = req.body.title;
   blog.snippet = req.body.snippet;
   blog.content = req.body.content;
